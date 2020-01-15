@@ -1,4 +1,4 @@
-var url = "http://localhost/crisis-response-plan/web/api/crp?_format=json";
+var url = "some_badass_url_here";
 HttpMessageHandler handler = new HttpClientHandler(){ };
 
 var httpClient = new HttpClient(handler)
@@ -10,7 +10,7 @@ var httpClient = new HttpClient(handler)
 httpClient.DefaultRequestHeaders.Add("ContentType", "application/json");
 
     
-var plainTextBytes = System.Text.Encoding.UTF8.GetBytes("iom:diphoromis");
+var plainTextBytes = System.Text.Encoding.UTF8.GetBytes("username:password");
     string val = System.Convert.ToBase64String(plainTextBytes);
     httpClient.DefaultRequestHeaders.Add("Authorization", "Basic " + val);
 
